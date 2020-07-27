@@ -1,4 +1,5 @@
 let operationType = null;
+let operationTypeSymbol = null;
 let countOfArgument = null;
 let isCorrectAnswer = false;
 let str = null;
@@ -81,26 +82,26 @@ function calculateTotalDiv() {
 function createFinishMsg() {
     switch (operationType) {
         case 'add':
-            operationType = ' + '
-            str = myArr.join(operationType);
+            operationTypeSymbol = ' + '
+            str = myArr.join(operationTypeSymbol);
             console.log('operation: add')
             alert(str + ' = ' + calculateTotalAdd())
             break;
         case 'sub':
-            operationType = ' - '
-            str = myArr.join(operationType);
+            operationTypeSymbol = ' - '
+            str = myArr.join(operationTypeSymbol);
             console.log('operation: sub')
             alert(str + ' = ' + calculateTotalSub())
             break;
         case 'mult':
-            operationType = ' * '
-            str = myArr.join(operationType);
+            operationTypeSymbol = ' * '
+            str = myArr.join(operationTypeSymbol);
             console.log('operation: mult')
             alert(str + ' = ' + calculateTotalMult())
             break;
         case 'div':
-            operationType = ' / '
-            str = myArr.join(operationType);
+            operationTypeSymbol = ' / '
+            str = myArr.join(operationTypeSymbol);
             console.log('operation: div')
             alert(str + ' = ' + calculateTotalDiv())
             break;

@@ -2,7 +2,7 @@ let operationType = null;
 let operationTypeSymbol = null;
 let countOfArgument = null;
 let isCorrectAnswer = false;
-let str = null;
+let resultString = null;
 let myArr = [];
 
 askAndCheckOperationType();
@@ -83,27 +83,27 @@ function createFinishMsg() {
     switch (operationType) {
         case 'add':
             operationTypeSymbol = ' + '
-            str = myArr.join(operationTypeSymbol);
+            resultString = myArr.join(operationTypeSymbol);
             console.log('operation: add')
-            alert(str + ' = ' + calculateTotalAdd())
+            alert(resultString + ' = ' + calculateTotalAdd())
             break;
         case 'sub':
             operationTypeSymbol = ' - '
-            str = myArr.join(operationTypeSymbol);
+            resultString = myArr.join(operationTypeSymbol);
             console.log('operation: sub')
-            alert(str + ' = ' + calculateTotalSub())
+            alert(resultString + ' = ' + calculateTotalSub())
             break;
         case 'mult':
             operationTypeSymbol = ' * '
-            str = myArr.join(operationTypeSymbol);
+            resultString = myArr.join(operationTypeSymbol);
             console.log('operation: mult')
-            alert(str + ' = ' + calculateTotalMult())
+            alert(resultString + ' = ' + calculateTotalMult())
             break;
         case 'div':
             operationTypeSymbol = ' / '
-            str = myArr.join(operationTypeSymbol);
+            resultString = myArr.join(operationTypeSymbol);
             console.log('operation: div')
-            alert(str + ' = ' + calculateTotalDiv())
+            alert(resultString + ' = ' + calculateTotalDiv())
             break;
     }
 }

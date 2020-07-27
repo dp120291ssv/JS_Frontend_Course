@@ -11,6 +11,7 @@ createFinishMsg();
 
 function askAndCheckOperationType() {
     do {
+        isCorrectAnswer = false;
         operationType = prompt('Какое из перечисленных действий вы хотите выполнить: add, sub, mult, div')
         if (operationType == 'add' || operationType == 'sub' || operationType == 'mult' || operationType == 'div') {
             isCorrectAnswer = true;
@@ -21,8 +22,9 @@ function askAndCheckOperationType() {
 
 function askAndCheckCountOfArgument() {
     do {
+        isCorrectAnswer = false;
         countOfArgument = +prompt('Укажите число аргументов для вычисления: от 1 до 7')
-        if (countOfArgument > 0 & countOfArgument < 8) {
+        if (countOfArgument > 0 && countOfArgument < 8) {
             isCorrectAnswer = true;
         }
     } while (isCorrectAnswer == false)

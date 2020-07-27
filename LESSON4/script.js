@@ -33,7 +33,7 @@ function writeArgument() {
     console.log('countOfArgument ' + countOfArgument)
     for (let i = 0, J = myArr.length; i < J;) {
         argNumber = prompt('Укажите число');
-        if (isNaN(argNumber) || (argNumber === null)) {
+        if (isNaN(argNumber) || (argNumber === null) || (argNumber === '')) {
             argNumber;
             console.log('argNumber: ' + argNumber)
         } else {
@@ -53,8 +53,8 @@ function calculateTotalAdd() {
 }
 
 function calculateTotalSub() {
-    let sub = 0;
-    for (let i = 0; i < myArr.length; i++) {
+    let sub = myArr[0];
+    for (let i = 1; i < myArr.length; i++) {
         sub = sub - parseInt(myArr[i]);
     }
     return sub;
@@ -69,8 +69,8 @@ function calculateTotalMult() {
 }
 
 function calculateTotalDiv() {
-    let div = 1;
-    for (let i = 0; i < myArr.length; ++i) {
+    let div = myArr[0];
+    for (let i = 1; i < myArr.length; ++i) {
         div = div / parseInt(myArr[i]);
     }
     return div;

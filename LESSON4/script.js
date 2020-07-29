@@ -25,7 +25,7 @@ function writeArgument() {
     myArr = new Array(countOfArgument);
     for (let i = 0; i < myArr.length;) {
         argNumber = prompt('Укажите число');
-        if (isNaN(argNumber) || (argNumber === null) || (argNumber === '')) {} else {
+        if (!(isNaN(argNumber) || (argNumber === null) || (argNumber === ''))) {
             myArr[i] = +argNumber;
             i++
         }

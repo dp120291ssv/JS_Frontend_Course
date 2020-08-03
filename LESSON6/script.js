@@ -24,7 +24,6 @@ function averageGroupMark() {
     let allSumMarks = [];
     for (let i = 0; students.length > i; i++) {
         allSumMarks.push(students[i].marks.reduce((a, b) => a + b) / students[i].marks.length);
-        console.log("i: " + i + " totalSum: " + allSumMarks)
     }
     return alert("Общая средняя оценка студентов: " + allSumMarks.reduce((a, b) => a + b, 0) / students.length);
 }

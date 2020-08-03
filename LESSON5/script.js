@@ -1,4 +1,3 @@
-let operationType = null;
 let operationTypeSymbol = null;
 let argumentsArr = [];
 let resultString = null;
@@ -8,9 +7,11 @@ askAndWriteArguments();
 createFinishMsg();
 
 function askAndCheckOperationType() {
+    let operationType;
     do {
         operationType = prompt('Какое из перечисленных действий вы хотите выполнить: add, sub, mult, div')
     } while (!(operationType == 'add' || operationType == 'sub' || operationType == 'mult' || operationType == 'div'));
+    return operationType;
 }
 
 function askAndWriteArguments() {

@@ -1,4 +1,5 @@
 let index = 0;
+let arr = []
 const students = [{
         name: 'John Smith',
         marks: [10, 8, 6, 9, 8, 7]
@@ -20,15 +21,33 @@ const students = [{
 averageStudentMark(2);
 averageGroupMark();
 
-function averageGroupMark() {
+function getSumMark() {
     let allSumMarks = [];
     for (let i = 0; students.length > i; i++) {
-        allSumMarks.push(students[i].marks.reduce((a, b) => a + b) / students[i].marks.length);
+        allSumMarks.push(getReduceArr(students[i].marks));
     }
-    return alert("Общая средняя оценка студентов: " + allSumMarks.reduce((a, b) => a + b, 0) / students.length);
+    allSumMarks = getReduceArr(allSumMarks);
+    return allSumMarks;
+}
+
+function getCountOfMark() {
+    let countOfAllMarks = [];
+    for (let i = 0; students.length > i; i++) {
+        countOfAllMarks.push(students[i].marks.length)
+    }
+    countOfAllMarks = getReduceArr(countOfAllMarks);
+    return countOfAllMarks;
+}
+
+function getReduceArr(arr) {
+    return arr.reduce((a, b) => a + b, 0);
+}
+
+function averageGroupMark() {
+    return alert("Общая средняя оценка студентов: " + getSumMark() / getCountOfMark());
 }
 
 function averageStudentMark(index) {
-    let sum = students[index].marks.reduce((a, b) => a + b, 0);
+    let sum = getReduceArr(students[index].marks);
     return alert(`Средняя оценка студента ${students[index].name} = ` + sum / students[index].marks.length);
 }

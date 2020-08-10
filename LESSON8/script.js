@@ -1,15 +1,18 @@
-let number;
-arrNaturalNumber = []
+getNaturalNumbersArr(5)
 
-getNaturalNumberArr(20);
-
-function getNaturalNumberArr(number) {
-    nexStep: for (let i = 2; i <= number; i++) {
-        for (let j = 2; j < i; j++) {
-            if (i % j == 0) continue nexStep;
-
-        }
+function getNaturalNumbersArr(argument) {
+    let arrNaturalNumber = []
+    for (let i = 2; i < argument; i++) {
+        if (!isNaturalNumber(i)) continue;
         arrNaturalNumber.push(i);
+
     }
-    return alert(`natural numbers: ${arrNaturalNumber}`)
+    return alert(arrNaturalNumber)
+}
+
+function isNaturalNumber(argument) {
+    for (let i = 2; i < argument; i++) {
+        if (argument % i == 0) return false;
+    }
+    return true;
 }

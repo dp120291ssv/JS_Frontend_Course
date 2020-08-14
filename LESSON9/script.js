@@ -4,17 +4,15 @@ const listItems = document.querySelector('#taskList');
 
 function createNewItem(task) {
     let item = document.createElement('li');
-    let span = document.createElement('span');
-    span.innerText = task;
-    item.appendChild(span);
+    let itemText = document.createElement('span');
+    itemText.innerText = task;
+    item.appendChild(itemText);
     return item;
 }
 
 function addTask() {
-    console.log("value: " + inputField.value)
     if (inputField.value) {
-        let item = createNewItem(inputField.value);
-        listItems.appendChild(item);
+        listItems.appendChild(createNewItem(inputField.value));
         inputField.value = "";
     }
 }

@@ -1,24 +1,23 @@
 const addBtn = document.querySelector('#add');
-const dltBtn = document.querySelector('#add');
 const inputField = document.querySelector('#field');
 const items = document.querySelector('#taskList');
 const btnDeleteAll = document.querySelector('#del');
 
-startProccess();
+addTaskProccess();
 setEnterKeyHendler();
 
 function addTask() {
     if (inputField.value)
         items.appendChild(createNewItem(inputField.value));
-    clearInput();
-    setDeleteHandler();
-    setDeleteAllHandler();
-    setStatusHendler();
 }
 
 function createNewItem(task) {
     const item = document.createElement('li');
     item.insertAdjacentHTML('beforeend', `<div class="item-block"><span class="item-text">${task}</span><img src="img/delete.png" width=25px class="item-delete"></div>`)
+    clearInput();
+    setDeleteHandler();
+    setDeleteAllHandler();
+    setStatusHendler();
     return item;
 }
 
@@ -35,7 +34,7 @@ function setEnterKeyHendler() {
     });
 }
 
-function startProccess() {
+function addTaskProccess() {
     addBtn.addEventListener('click', addTask);
 }
 

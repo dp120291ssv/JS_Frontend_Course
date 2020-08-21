@@ -1,22 +1,22 @@
-function createCalculator(counts) {
+function createCalculator(defaultNum) {
     return {
         sum: function(someNum) {
-            counts += someNum;
+            defaultNum += someNum;
         },
         mult: function(someNum) {
-            counts *= someNum;
+            return defaultNum *= someNum;
         },
         sub: function(someNum) {
-            counts -= someNum;
+            return defaultNum -= someNum;
         },
         div: function(someNum) {
-            counts /= someNum;
+            return defaultNum /= someNum;
         },
         set: function(someNum) {
-            counts = someNum;
+            return defaultNum = someNum;
         },
         log: function() {
-            console.log(name, counts);
+            return console.log(name, defaultNum);
         }
     }
 }

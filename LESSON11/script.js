@@ -22,7 +22,6 @@ function createCalculator(name) {
 const calc = createCalculator("результат:");
 
 /**Для примера*/
-
 calc.sum(10);
 calc.sum(5);
 calc.mult(10);

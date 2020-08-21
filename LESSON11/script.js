@@ -9,8 +9,8 @@ function createCalculator(counts) {
         div: function(someNum) {
             counts /= someNum;
         },
-        set: function() {
-            counts = 0;
+        set: function(someNum) {
+            counts = someNum;
         },
         log: function() {
             console.log(name, counts);
@@ -18,17 +18,12 @@ function createCalculator(counts) {
     }
 }
 
-const calc = createCalculator(33);
+const calc = createCalculator(10);
 
 /**Для примера*/
-calc.sum(10);
-calc.sum(5);
-calc.mult(10);
-calc.mult(2);
-calc.sum(33);
-calc.div(3);
-calc.set();
-calc.sum(200);
-calc.mult(1.5);
-calc.div(60);
+calc.sum(5); // 15
+calc.mult(10); // 150
+calc.sub(40); // 110
+calc.div(10); // 11
+calc.set(100); //
 calc.log();

@@ -1,7 +1,7 @@
 function createCalculator(defaultNum) {
     return {
         sum: function(someNum) {
-            defaultNum += someNum;
+            return defaultNum += someNum;
         },
         mult: function(someNum) {
             return defaultNum *= someNum;

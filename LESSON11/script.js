@@ -16,7 +16,6 @@ function createCalculator(counts) {
             console.log(name, counts);
         }
     }
-    return counts;
 }
 
 const calc = createCalculator(33);

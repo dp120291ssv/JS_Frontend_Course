@@ -6,6 +6,9 @@ function createCalculator(counts) {
         mult: function(someNum) {
             counts *= someNum;
         },
+        sub: function(someNum) {
+            counts -= someNum;
+        },
         div: function(someNum) {
             counts /= someNum;
         },

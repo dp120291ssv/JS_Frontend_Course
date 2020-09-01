@@ -17,7 +17,7 @@ function СreateCalculator(defaultNum) {
             return defaultNum /= someNum;
         },
         this.log = () => {
-            return console.log("", defaultNum);
+            return console.log("Итоговое значение: ", defaultNum);
         },
         this.getResult = () => {
             return expression;

@@ -35,3 +35,5 @@ calc.sub(40); // 110
 calc.div(10); // 11
 calc.log();
 console.log(calc.getResult());
+
+calc = null

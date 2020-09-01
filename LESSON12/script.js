@@ -1,32 +1,34 @@
-function СreateCalculator(defaultNum) {
-    let expression = defaultNum;
+function CreateCalculator(defaultNum) {
+    this.expression = [defaultNum];
+    this.result = defaultNum;
     this.sum = (someNum) => {
-            expression += ' + ' + someNum
-            return defaultNum += someNum;
-        },
-        this.mult = (someNum) => {
-            expression += ' * ' + someNum
-            return defaultNum *= someNum;
-        },
-        this.sub = (someNum) => {
-            expression += ' - ' + someNum
-            return defaultNum -= someNum;
-        },
-        this.div = (someNum) => {
-            expression += ' / ' + someNum
-            return defaultNum /= someNum;
-        },
-        this.log = () => {
-            return console.log("Итоговое значение: ", defaultNum);
-        },
-        this.getResult = () => {
-            return expression;
-        }
+        this.expression.push("+", someNum);
+        this.result += someNum;
+        return this.result;
+    };
+    this.mult = (someNum) => {
+        this.expression.push("*", someNum);
+        this.result *= someNum;
+        return this.result;
+    };
+    this.sub = (someNum) => {
+        this.expression.push("-", someNum);
+        this.result -= someNum;
+        return this.result;
+    };
+    this.div = (someNum) => {
+        this.expression.push("/", someNum);
+        this.result /= someNum;
+        return this.result;
+    };
+    this.log = () => {
+        return console.log("Итоговое значение: ", this.result);
+    };
+    this.getResult = () => {
+        return this.expression.concat('=', this.result).join(" ");
+    };
 }
-
-
-const calc = new СreateCalculator(10);
-
+const calc = new CreateCalculator(10);
 /**Для примера*/
 calc.sum(5); // 15
 calc.mult(10); // 150

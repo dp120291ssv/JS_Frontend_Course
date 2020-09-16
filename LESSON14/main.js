@@ -4,9 +4,7 @@ function Hamburger(size) {
 }
 
 Hamburger.prototype.addTopping = function (topping) {
-  if (!this._toppings.includes(topping)) {
     return this._toppings.push(topping);
-  }
 };
 
 Hamburger.prototype.getPrice = function () {

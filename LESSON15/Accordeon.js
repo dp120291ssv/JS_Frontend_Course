@@ -26,12 +26,12 @@ class Accordeon {
     });
   }
 
-  toggleItem(el) {
-    if (el.contains(Accordeon.VISIBLE_CLASS)) {
-      el.remove(Accordeon.VISIBLE_CLASS);
+  toggleItem(targetElement) {
+    if (targetElement.contains(Accordeon.VISIBLE_CLASS)) {
+        targetElement.remove(Accordeon.VISIBLE_CLASS);
     } else {
       this._container.querySelectorAll(".title").forEach((child) => child.parentNode.classList.remove(Accordeon.VISIBLE_CLASS));
-      el.add(Accordeon.VISIBLE_CLASS);
+      targetElement.add(Accordeon.VISIBLE_CLASS);
     }
   }
 }

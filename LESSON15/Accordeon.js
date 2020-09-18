@@ -30,7 +30,7 @@ class Accordeon {
     if (targetElement.contains(Accordeon.VISIBLE_CLASS)) {
         targetElement.remove(Accordeon.VISIBLE_CLASS);
     } else {
-      this._container.querySelectorAll(".item").forEach((item) => item.classList.remove(Accordeon.VISIBLE_CLASS));
+      this._container.querySelectorAll(".item").forEach((itemElement) => itemElement.classList.remove(Accordeon.VISIBLE_CLASS));
       targetElement.add(Accordeon.VISIBLE_CLASS);
     }
   }

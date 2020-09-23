@@ -21,7 +21,7 @@ window.addEventListener("load", function () {
 
   addBookDiv.addEventListener("click", removeEntry);
 
-  var addressBook = [];
+  let addressBook = [];
 
   function JsonStructure(fullname, phone, email) {
     this.fullname = fullname;

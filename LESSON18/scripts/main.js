@@ -2,8 +2,6 @@
 const URL = 'https://5dd3d5ba8b5e080014dc4bfa.mockapi.io/contacts';
 const DELETE_BTN_CLASS = 'delete-btn';
 const listEl = document.getElementById('usersList');
-const nameInputEl = document.getElementById('userName');
-const phoneInputEl = document.getElementById('userPhone');
 const userTemplate = document.getElementById('userTemplate').innerHTML;
 
 let list = [];
@@ -19,10 +17,10 @@ function onListElDeleteUser(e) {
 }
 
 function init() {
-    getList();
+  geUsertList();
 }
 
-function getList() {
+function geUsertList() {
     fetch(URL)
         .then((res) => res.json())
         .then(setData)
@@ -41,6 +39,7 @@ function getItemElementHtml(item) {
     return userTemplate
         .replace('{{id}}', item.id)
         .replace('{{name}}', item.name)
+        .replace('{{surname}}', item.surname)
         .replace('{{phone}}', item.phone);
 }
 
@@ -50,9 +49,4 @@ function deleteItem(id) {
     });
     list = list.filter((item) => item.id != id);
     renderList(list);
-}
-
-function clearForm() {
-    nameInputEl.value = '';
-    phoneInputEl.value = '';
 }

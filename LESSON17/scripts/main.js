@@ -48,7 +48,6 @@ function getFirstAlbumPhotos(data) {
   }
 }
 
-// 
 function renderAlbums(data) {
     albumsEl.innerHTML = data
         .map((album) => setAlbumsParamsInHTML(album))

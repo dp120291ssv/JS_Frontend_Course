@@ -81,7 +81,6 @@ function submitForm() {
         .then((data) => {
             list.push(data);
             renderList(list);
-
             clearForm();
         });
 }

@@ -1,0 +1,32 @@
+.field {
+  display: flex;
+  justify-content: center;
+}
+
+.button{
+  display: flex;
+  justify-self: start;
+  margin: 5px;
+}
+.note {
+  max-height: 110px;
+  min-width: 110px;
+  background-color: rgb(231, 231, 70);
+  color: black;
+  margin: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.edit-note {
+  display: flex;
+  resize: none;
+  min-height: 100px;
+  min-width: 100px;
+}
+
+.delete-note{
+  padding: 5px;
+  color: red;
+  cursor: pointer;
+}

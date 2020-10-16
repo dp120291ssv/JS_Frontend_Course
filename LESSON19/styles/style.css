@@ -1,32 +1,92 @@
-.field {
-  display: flex;
-  justify-content: center;
+/************ Tags ************/
+ 
+/* Just some basic reset for the body tag */
+body {
+	background:#F1C387;
+	padding:0;
+	margin:0;
+	font-family: Helvetica, Verdana, Geneva, sans-serif
 }
-
-.button{
-  display: flex;
-  justify-self: start;
-  margin: 5px;
+ 
+header {
+	padding-left:20px;
+	height:50px;
+	display:block;
+	background:#0E0300;
+	-webkit-box-shadow:0px 2px 5px gray;
+	-moz-box-shadow:0px 2px 5px gray;
+	box-shadow:0px 2px 5px gray;
+	text-align:right;
 }
-.note {
-  max-height: 110px;
-  min-width: 110px;
-  background-color: rgb(231, 231, 70);
-  color: black;
-  margin: 10px;
-  padding: 10px;
-  position: relative;
+ 
+h1 {
+        color:white;	
+        display:inline;
+        font-size:210%;	
+        padding:15px 10px 0px 0px;
+	text-shadow: 1px -1px 0px #999; 
+        text-transform:capitalize;
 }
-
-.edit-note {
-  display: flex;
-  resize: none;
-  min-height: 100px;
-  min-width: 100px;
+ 
+ 
+input[type="button"] {
+        background:#EFE4DC;
+        border:1px solid black;
+        -moz-border-radius:5px;
+        border-radius:5px;
+        color:black;
+        font-weight:bold;
+        float:left;	
+        padding:10px;
+	margin:5px 10px 0 0;
+        text-shadow: 1px 1px 0px white;
 }
-
-.delete-note{
-  padding: 5px;
-  color: red;
-  cursor: pointer;
+ 
+input[type="button"]:hover {
+	background:#E03A00;
+	color:white;
+	text-shadow: 1px 1px 0px black;
+	cursor:pointer;
+}
+ 
+/************ Classes ************/
+ 
+.postick {
+	border:1px solid gray;
+	width:200px;
+	height:200px;
+	padding:4px;
+	font-size:85%;
+	background:#FFFC7F;
+	-moz-box-shadow:2px 2px 2px #999999;
+	-webkit-box-shadow:2px 2px 2px #999999;
+	box-shadow:2px 2px 2px #999999;
+	position:absolute;
+}
+ 
+.toolbar {
+	text-align:right;
+	font-weight:bold;
+}
+ 
+/* Postick's button "delete" */
+.delete {
+	cursor:pointer;
+	font-size:120%;
+}
+ 
+/* Content to be editable inside the postick */
+.editable {
+	cursor:pointer;
+	height:180px;
+	marging:0 auto;
+	width:100%;
+	overflow:hidden;
+	position:relative;
+	-moz-text-shadow: 1px 1px 0px white;
+	text-shadow: 1px 1px 0px white;
+}
+ 
+.editable:hover{
+	border:1px dotted gray;
 }

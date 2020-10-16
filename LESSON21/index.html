@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+    <table class="contacts">
+        <thead>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Phone number</th>
+            <th>Action</th>
+        </thead>
+        <tbody id="contactList"></tbody>
+        <button id="addBtn" class="contacts__add">Add Contact</button>
+    </table>
+    <!-- contacts/ -->
+
+    <div id="dialogForm" title="Contact" class="dialog">
+        <form id="contactForm">
+            <fieldset>
+                <label for="name">Name</label>
+                <input type="hidden" name="id" id="id" value="" class="dialog__input"/>
+                <input type="text" name="name" id="name" value="" class="dialog__input"/>
+                <label for="surname">Surname</label>
+                <input type="text" name="surname" id="surname" value=""  class="dialog__input"/>
+                <label for="phone">Phone</label>
+                <input type="text" name="phone" id="phone" value="" class="dialog__input" />
+            </fieldset>
+        </form>
+    </div>
+    <!-- dialogForm/ -->
+
+    <script type="text/template" id="contactTemplate">
+        <tr class="contact-row" data-id="{{id}}">
+            <td>{{name}}</td>
+            <td>{{surname}}</td>
+            <td>{{phone}}</td>
+            <td>
+                <button type="button" class="edit-btn">Edit</button>
+                <button type="button" class="delete-btn">Delete</button>
+            </td>
+        </tr>
+    </script> 
+    
+</body>
+</html>

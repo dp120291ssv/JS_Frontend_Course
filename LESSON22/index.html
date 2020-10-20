@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example JQuery Gallary</title>
+  </head>
+  <body>
+
+    <!-- --------------------------------------------------------- -->
+    <!-- Захардкоженные фотки с которыми плагин работает корректно -->
+    <!-- --------------------------------------------------------- -->
+
+    <div id="photos" class="justified-gallery">
+      <a href="https://via.placeholder.com/600/92c952">
+        <img alt="Title 1" src="https://via.placeholder.com/600/92c952" />
+      </a>
+      <a href="https://via.placeholder.com/600/771796">
+        <img alt="Title 2" src="https://via.placeholder.com/600/771796" />
+      </a>
+      <a href="https://via.placeholder.com/600/92c952">
+        <img alt="Title 1" src="https://via.placeholder.com/600/92c952" />
+      </a>
+
+      <a href="https://via.placeholder.com/600/771796">
+        <img alt="Title 2" src="https://via.placeholder.com/600/771796" />
+      </a>
+      <a href="https://via.placeholder.com/600/92c952">
+        <img alt="Title 1" src="https://via.placeholder.com/600/92c952" />
+      </a>
+
+    <!-- -------------------------------------------------------------------------------- -->
+    <!-- Мой шаблон, с которым не работает, я думаю, что прикол наверно 
+    с инициализацией DOM, потому что в тег а и img не проставляется классы CSS из плагина -->
+    <!-- -------------------------------------------------------------------------------- -->
+
+
+    <!-- <div id="photos" class="justified-gallery">                
+        <script type="text/template" id="photoItemTemplate"> -->
+            <!-- <a href="{{url}}"> -->
+                <!-- <img src="{{thumbnailUrl}}"> -->
+            <!-- </a> -->
+        <!-- </script>
+    </div> -->
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="scripts/jquery.justifiedGallery.min.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <link rel="stylesheet" href="styles/justifiedGallery.min.css"/>
+  </body>
+</html>

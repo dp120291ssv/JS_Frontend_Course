@@ -1,7 +1,7 @@
 $(() => {
   const PHOTOS_URL = "https://jsonplaceholder.typicode.com/photos?";
-  const photosEl = document.querySelector("#photos");
-  const photoItemTemplate = document.querySelector("#photoItemTemplate").innerHTML;
+  const $photosEl = $("#photos");
+  const $photoItemTemplate = $("#photoItemTemplate").html();
 
   init();
 
@@ -15,18 +15,21 @@ $(() => {
       .then(renderPhotos);
   }
 
+  function initGallary(){
+    $photosEl.justifiedGallery({
+      rowHeight: 70,
+      margins: 3,
+    });
+  }
+
   function renderPhotos(data) {
-    photosEl.innerHTML = data
-      .map((photo) => setPhotosParamsInHTML(photo))
-      .join("\n");
-      $("#photos").justifiedGallery({
-        rowHeight: 70,
-        margins: 3,
-      });
+    const html = data.map(setPhotosParamsInHTML).join("\n");
+    $photosEl.html(html);
+    initGallary();
   }
 
   function setPhotosParamsInHTML(photo) {
-    return photoItemTemplate
+    return $photoItemTemplate
       .replace("{{url}}", photo.url)
       .replace("{{thumbnailUrl}}", photo.thumbnailUrl);
   }
